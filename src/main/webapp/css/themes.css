@@ -1,0 +1,60 @@
+.myDiv {
+  
+  background: linear-gradient(#e38017,#FFC312 );
+ 
+}
+.au-btn--submit{
+	background:#e38017;
+}
+.my-card
+{
+    position:absolute;
+   
+    top:-30px;
+    border-radius:50%;
+}
+.jum{
+	margin-top: 40px;
+	margin-left: 30px;
+}
+.btn-danger{
+	background:#e38017;
+}
+
+.btnD  {
+  border: none;
+  background-color: #FF005C;
+  padding: 12px 26px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-block;
+   border-radius:6px;
+}
+
+.btnM {
+  border: none;
+  background-color: #00DC7D;
+  padding: 12px 26px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-block;
+   border-radius:6px;
+}
+.btnI {
+  border: none;
+  background-color: #1EC9E8;
+  padding: 12px 26px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-block;
+   border-radius:6px;
+}
+.btnE {
+  border: none;
+  background-color: #00DC7D;
+  padding: 12px 26px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius:6px;
+ 
+

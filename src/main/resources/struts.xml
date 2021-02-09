@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.devMode" value="false" />
+
+	<package name="default" extends="struts-default" namespace="/">
+
+		
+		<action name="index"
+			class="com.master.actions.ProduitStockAction" method="execute">
+			<result name="success">index.jsp</result>
+		</action>
+
+		<action name="add" class="com.master.actions.ProduitStockAction"
+			method="add">
+			<result name="success" type="chain">index</result>
+			<result name="input" type="chain">index</result>
+		</action>
+
+		<action name="edit" class="com.master.actions.ProduitStockAction"
+			method="edit">
+			<result name="success">edit.jsp</result>
+		</action>
+
+		<action name="redirect" class="com.master.actions.UserAction">
+<!-- 			<result name="success" type="chain">index</result> -->
+			<result name="input">login.jsp</result>
+			<result name="success" type="chain">acceuil</result>
+		</action>
+
+		<action name="update"
+			class="com.master.actions.ProduitStockAction" method="update">
+			<result name="success" type="chain">index</result>
+		</action>
+
+		<action name="save_produitStock"
+			class="com.master.actions.ProduitStockAction" method="save_produitStock">
+			<result name="success" type="chain">index</result>
+		</action>
+		
+          <!-- 		demand de stock  -->
+          
+		<action name="produitStock_a_une_date"
+			class="com.master.actions.ProduitStockAction" method="produitStock_a_une_date">
+			<result name="success">demande_du_Stock.jsp</result>
+		</action>
+
+
+		<action name="produitStock_information"
+			class="com.master.actions.ProduitStockAction"
+			method="produitStock_information">
+			<result name="success">produitsStock_info.jsp</result>
+		</action>
+
+		<action name="delete_produitsStock"
+			class="com.master.actions.ProduitStockAction"
+			method="delete_produitsStock">
+			<result name="success" type="chain">index</result>
+		</action>
+
+		<action name="ProduitApprovisionnement" class="com.master.actions.ProduitApprovisionnementAction"
+			method="execute">
+			<result name="success">creatProduitApprovisionnement.jsp</result>
+		</action>
+
+		<action name="addProduitApprovisionnement" class="com.master.actions.ProduitApprovisionnementAction"
+			method="addProduitApprovisionnement">
+			<result name="success" type="chain">ProduitApprovisionnement</result>
+		</action>
+		<action name="deleteProduitApprovisionnement"
+			class="com.master.actions.ProduitApprovisionnementAction" method="deleteProduitApprovisionnement">
+			<result name="success" type="chain">ProduitApprovisionnement</result>
+		</action>
+
+		<action name="updateProduitApprovisionnement"
+			class="com.master.actions.ProduitApprovisionnementAction" method="updateProduitApprovisionnement">
+			<result name="success" >updateProduitApprovisionnement.jsp</result>
+		</action>
+		
+		<action name="editProduitApprovisionnement"
+			class="com.master.actions.ProduitApprovisionnementAction" method="editProduitApprovisionnement">
+			<result name="success" type="chain">ProduitApprovisionnement</result>
+		</action>
+		
+		<action name="acceuil"
+			class="com.master.actions.AcceuilAction" >
+			<result name="success" >acceuil.jsp</result>
+        <!-- 			<result name="login">login.jsp</result>   -->
+		</action>
+		
+		<action name="logout"
+			class="com.master.actions.AcceuilAction" method="logout">
+			<result name="success">login.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>
